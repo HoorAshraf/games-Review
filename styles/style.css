@@ -1,0 +1,119 @@
+:root {
+  --main-color: #3a497b;
+  --secondary-color: #272b30;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Comfortaa", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #272b30;
+}
+.tab-bar {
+  background-color: var(--main-color);
+  width: 85%;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+  padding: 1rem; /* Increase padding for larger navbar */
+  height: 4rem; /* Adjust height */
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.8rem; /* Make nav links smaller */
+  color: white;
+  padding: 0.5rem; /* Add spacing for better alignment */
+}
+
+.navbar-nav .nav-link.active {
+  color:#1280B3; /* Keep active link distinct */
+}
+
+div.card {
+  filter: grayscale(0.78);
+  transition: all 0.5s ease;
+}
+div.card:hover {
+  scale: 1.05;
+  filter: grayscale(0);
+}
+div.card-body .free-btn {
+  height: fit-content;
+}
+div.card-footer span {
+  font-size: 0.7rem;
+  background-color: #32383e;
+  padding: 3px;
+  border-radius: 5px;
+}
+div.card img {
+  border-radius: 1.2rem;
+  padding-inline: 1rem;
+  object-fit: fill;
+}
+button.show-game:hover {
+  background-color: #FFC107 !important;
+  color: white;
+}
+p.card-text {
+  font-size: 0.8rem;
+}
+.loading-state {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.497);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid #ddd;
+  border-top-color: orange;
+  animation: loading 1s linear infinite;
+}
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+} 
+
+
+
+
+
+.details-container .movie-info p {
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+.details-container .movie-info p span {
+  font-weight: bold;
+  color: BLACK;
+  background-color: #0DCAF0; /* Apply a blue color to the category and platform text */
+}
+
+.details-container .movie-info p.status {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #f5a623; /* Orange background for Status */
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.details-container .movie-info p.status.not-available {
+  background-color: #8b8b8b; /* Grey for "Status not available" */
+  color: #e1e1e1;
+}
